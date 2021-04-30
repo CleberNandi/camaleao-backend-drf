@@ -5,5 +5,5 @@ from .views import home
 app_name = "chameleon"
 
 urlpatterns = [
-    path('home/', home, name='home'),
+    path('', home, name='home'),
 ]

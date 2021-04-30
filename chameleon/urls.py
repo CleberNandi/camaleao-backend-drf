@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('', include("chameleon_api.urls")),
+    path('home/', include("chameleon_api.urls", namespace="home")),
     path('admin/', admin.site.urls),
 ]
 
