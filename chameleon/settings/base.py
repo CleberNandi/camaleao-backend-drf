@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     # 3rd party
     'rest_framework',
     # local apps
-    'chameleon_user.apps.ChameleonUserConfig'
+    'chameleon_api.apps.ChameleonApiConfig',
+    'chameleon_user.apps.ChameleonUserConfig',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +63,7 @@ ROOT_URLCONF = 'chameleon.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,9 +126,15 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+LOGIN_URL = '/login/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = (
+    # pasta media para abrigar os arquivos dos usuários
+    os.path.join(BASE_DIR, 'core', 'media')
+)
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # User Model
 AUTH_USER_MODEL = "chameleon_user.ChameleonUser"
