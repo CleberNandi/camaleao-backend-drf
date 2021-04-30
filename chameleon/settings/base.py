@@ -130,7 +130,7 @@ LOGIN_URL = '/login/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = (
     # pasta media para abrigar os arquivos dos usuários
-    os.path.join(BASE_DIR, 'core', 'media')
+    os.path.join(BASE_DIR, 'chameleon', 'media')
 )
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
