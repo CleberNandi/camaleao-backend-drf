@@ -11,3 +11,11 @@
 	<li>Frontend Reactjs</li>
 	<li>Mobile React Native</li>
 </ul>
+
+<h3>Instalação Heroku</h3>
+<ul>
+	<li>ALLOWED_HOSTS</li>
+	<li>DEBUG: False</li>
+	<li>DJANGO_SETTINGS_MODULE: chameleon.settings.heroku</li>
+	<li>SECRET_KEY</li>
+</ul>
